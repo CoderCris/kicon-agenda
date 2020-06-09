@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "kikon-agenda-9a8ce": {
+      "hosting": {
+        "Kikon-agenda": [
+          "kikon-agenda-9a8ce"
+        ]
+      }
+    }
+  }
+}
