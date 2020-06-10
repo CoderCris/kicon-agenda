@@ -1,0 +1,10 @@
+mat-toolbar{
+    background-color: transparent;
+}
+
+mat-icon{
+    background-color: rgba(37, 39, 91, 0.44);
+    margin: 7px;
+    border-radius: 5px;
+    color: white;
+}
