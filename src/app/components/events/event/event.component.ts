@@ -18,7 +18,7 @@ export class EventComponent implements OnInit {
 
   event_name: string;
   date: string;
-  contacts: string[] ;
+  contacts: string[];
   constructor() { }
 
   ngOnInit() { }
