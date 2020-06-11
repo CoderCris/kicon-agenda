@@ -24,7 +24,8 @@ import { MatIconModule } from '@angular/material/icon';
 //Testing modules for fix datepicker
 
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatFormFieldModule } from '@angular/material/form-field'; 
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatIconModule,
     MatDatepickerModule,
     MatFormFieldModule,
+    MatNativeDateModule,
    
 
   ],
