@@ -1,10 +1,17 @@
 <div>
   <form>
-    <input type="text" name="name" [(ngModel)]="event_name" />
-    <input type="text" name="date" [(ngModel)]="date" />
-    <input type="text" name="contacts" [(ngModel)]="contacts" />
+    <input type="text" name="name" placeholder="name" [(ngModel)]="event_name" />
+
+    <mat-form-field>
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker" [(ngModel)]="date" required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <input type="text" name="contacts" placeholder="contacts" [(ngModel)]="contacts" />
 
     <button (click)="addEvent()">HERE</button>
-    
+
   </form>
 </div>

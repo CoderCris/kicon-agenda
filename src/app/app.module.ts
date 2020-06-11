@@ -21,6 +21,11 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 
+//Testing modules for fix datepicker
+
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field'; 
+
 
 @NgModule({
   declarations: [
@@ -39,6 +44,10 @@ import { MatIconModule } from '@angular/material/icon';
     NoopAnimationsModule,
     MatToolbarModule,
     MatIconModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+   
+
   ],
 
 
