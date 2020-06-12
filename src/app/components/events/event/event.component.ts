@@ -18,6 +18,7 @@ export class EventComponent implements OnInit {
 
   event_name: string;
   date: string;
+  time: string;
   contacts: string[];
   constructor() { }
 
@@ -29,7 +30,7 @@ export class EventComponent implements OnInit {
 
     //if(user){
 
-    db.collection("usuarios").doc(this.user).collection("events").add({
+    db.collection("events").add({
 
       name: this.event_name,
       date: this.date,

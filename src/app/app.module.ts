@@ -26,7 +26,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
-import { MatInputModule } from '@angular/material/input'
+import { MatInputModule } from '@angular/material/input';
+import { EventEditComponent } from './components/events/event-edit/event-edit.component'
 
 
 @NgModule({
@@ -34,7 +35,7 @@ import { MatInputModule } from '@angular/material/input'
     AppComponent,
     EventsComponent,
     EventComponent, 
-    ToolbarComponent,
+    ToolbarComponent, EventEditComponent,
   ],
   imports: [
     BrowserModule,

@@ -3,9 +3,13 @@
     "",
     "\\src",
     "\\src\\app",
+    "\\src\\app\\components",
+    "\\src\\app\\components\\events",
+    "\\src\\app\\components\\events\\event",
     "\\src\\app\\services",
-    "\\src\\app\\services\\utils"
+    "\\src\\app\\services\\utils",
+    "\\src\\environments"
   ],
-  "SelectedNode": "\\src\\app\\app.module.ts",
+  "SelectedNode": "\\src\\app\\components\\events\\event\\event.component.ts",
   "PreviewInSolutionExplorer": false
 }
