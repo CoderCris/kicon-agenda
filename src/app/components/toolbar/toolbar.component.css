@@ -1,10 +1,38 @@
-mat-toolbar{
-    background-color: transparent;
-}
-
 mat-icon{
     background-color: rgba(37, 39, 91, 0.44);
     margin: 7px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    padding-top: 7px;
     border-radius: 5px;
     color: white;
+}
+
+li{
+    list-style-type: none;
+}
+
+.navbar-brand{
+    font-family: 'Lucida Console', Monaco, monospace;
+    font-size: xx-large;
+    margin-top: 15px;
+}
+
+.dropdown-menu{
+    background-color:#696B94;
+    border-radius: 10px;
+}
+
+.dropdown-toggle::after{
+    display: none;
+}
+
+.dropdown-item{
+    font-family: 'Lucida Console', Monaco, monospace;
+    font-size: 20px;
+}
+
+.dropdown-item:hover{
+    background-color: rgba(255,255,255, 0.5);
 }
