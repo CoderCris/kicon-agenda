@@ -1,8 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
-
 
 /** Firebase Modules */
 import { AngularFireModule } from '@angular/fire';
@@ -22,6 +20,7 @@ import { GroupsContactsViewComponent } from './components/groupsContactsView/gro
 import { CreateEventComponent } from './components/createEvent/createEvent.component';
 import { EventViewComponent } from './components/eventView/eventView.component';
 import { EventEditComponent } from './components/events/event-edit/event-edit.component'
+import { MainpageComponent } from './components/mainpage/mainpage.component'
 
 /** Materials Modules */
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
@@ -31,6 +30,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -45,10 +45,10 @@ import { MatInputModule } from '@angular/material/input';
     GroupsContactsViewComponent,
     CreateEventComponent,
     EventViewComponent,
+    MainpageComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     AngularFireModule.initializeApp(config),
     AngularFireAnalyticsModule,
     AngularFireModule,
@@ -61,6 +61,7 @@ import { MatInputModule } from '@angular/material/input';
     MatFormFieldModule,
     MatNativeDateModule,
     MatInputModule,
+    AppRoutingModule,
      ],
 
 

@@ -6,8 +6,10 @@ import { CreateGroupComponent } from './components/createGroup/createGroup.compo
 import { GroupsContactsViewComponent } from './components/groupsContactsView/groupsContactsView.component';
 import { CreateEventComponent } from './components/createEvent/createEvent.component';
 import { EventViewComponent } from './components/eventView/eventView.component';
+import { MainpageComponent } from './components/mainpage/mainpage.component'
 
 const routes: Routes = [
+    {path: '', component: MainpageComponent},
     {path: 'event', component: EventComponent},
     {path: 'addContact', component: AddContactComponent},
     {path: 'createGroup', component: CreateGroupComponent},
