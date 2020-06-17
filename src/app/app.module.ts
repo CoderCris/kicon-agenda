@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 
 
 /** Firebase Modules */
@@ -39,6 +40,7 @@ import { EventEditComponent } from './components/events/event-edit/event-edit.co
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     AngularFireModule.initializeApp(config),
     AngularFireAnalyticsModule,
     AngularFireModule,
