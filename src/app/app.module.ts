@@ -16,19 +16,21 @@ import { AppComponent } from './app.component';
 import { EventsComponent } from './components/events/events.component';
 import { EventComponent } from './components/events/event/event.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { AddContactComponent } from './components/addContact/addContact.component';
+import { CreateGroupComponent } from './components/createGroup/createGroup.component';
+import { GroupsContactsViewComponent } from './components/groupsContactsView/groupsContactsView.component';
+import { CreateEventComponent } from './components/createEvent/createEvent.component';
+import { EventViewComponent } from './components/eventView/eventView.component';
+import { EventEditComponent } from './components/events/event-edit/event-edit.component'
 
 /** Materials Modules */
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-
-//Testing modules for fix datepicker
-
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
-import { EventEditComponent } from './components/events/event-edit/event-edit.component'
 
 
 @NgModule({
@@ -36,7 +38,13 @@ import { EventEditComponent } from './components/events/event-edit/event-edit.co
     AppComponent,
     EventsComponent,
     EventComponent, 
-    ToolbarComponent, EventEditComponent,
+    ToolbarComponent, 
+    EventEditComponent,
+    AddContactComponent,
+    CreateGroupComponent,
+    GroupsContactsViewComponent,
+    CreateEventComponent,
+    EventViewComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,9 +61,7 @@ import { EventEditComponent } from './components/events/event-edit/event-edit.co
     MatFormFieldModule,
     MatNativeDateModule,
     MatInputModule,
-   
-
-  ],
+     ],
 
 
   providers: [],

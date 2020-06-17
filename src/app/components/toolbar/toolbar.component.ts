@@ -9,10 +9,20 @@ import { Router } from '@angular/router';
 })
 export class ToolbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
-  
 
+  newEvent(){
+    this.router.navigate(['/createEvent']);
+  }
+
+  newContact(){
+    this.router.navigate(["/addContact"]);
+  }
+
+  newGroup(){
+    this.router.navigate(["/createGroup"]);
+  }
 }
