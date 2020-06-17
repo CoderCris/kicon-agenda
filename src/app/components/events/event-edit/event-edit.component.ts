@@ -10,7 +10,7 @@ import * as firebase from 'firebase';
 export class EventEditComponent implements OnInit {
 
   id: string; //para registrar el evento a editar
-  name: string;
+  event_name: string;
   date: string;
   time: string;
   contacts: string;
@@ -18,21 +18,21 @@ export class EventEditComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.id = "";
+    this.id = "vaHGpYpPvUWtC5DPyzC7";
 
   }
 
   editName() {
-    db.collection("events").doc(this.id).set({
+    db.collection("events").doc(this.id).update({
 
-      name: this.name,
+      name: this.event_name,
     })
 
   }
 
   editDate() {
 
-    db.collection("events").doc(this.id).set({
+    db.collection("events").doc(this.id).update({
 
       date: this.date,
     })

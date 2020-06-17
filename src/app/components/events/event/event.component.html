@@ -1,17 +1,16 @@
 <div class="container">
+
   <mat-label class="title">Add event</mat-label>
 
   <mat-form-field>
     <input matInput type="text" name="name" placeholder="name" [(ngModel)]="event_name" />
   </mat-form-field>
 
-
   <!--
   <mat-form-field>
-   <input matInput [matTimepicker]="endTime" [format]="24" name="time" [(ngModel)]="time"/>
+   <input matInput [ngxTimepicker]="endTime" [format]="24" name="time" [(ngModel)]="time"/>
   </mat-form-field>
-    -->
-
+            -->
   <mat-form-field>
     <mat-label>Choose a date</mat-label>
     <input matInput [matDatepicker]="picker" [(ngModel)]="date" name="date" required>
