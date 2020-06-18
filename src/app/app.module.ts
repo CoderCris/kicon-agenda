@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 
 /** Firebase Modules */
 import { AngularFireModule } from '@angular/fire';
@@ -17,7 +18,6 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { AddContactComponent } from './components/addContact/addContact.component';
 import { CreateGroupComponent } from './components/createGroup/createGroup.component';
 import { GroupsContactsViewComponent } from './components/groupsContactsView/groupsContactsView.component';
-import { CreateEventComponent } from './components/createEvent/createEvent.component';
 import { EventViewComponent } from './components/eventView/eventView.component';
 import { EventEditComponent } from './components/events/event-edit/event-edit.component'
 import { MainpageComponent } from './components/mainpage/mainpage.component'
@@ -30,7 +30,9 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
-import { AppRoutingModule } from './app-routing.module';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+
 
 
 @NgModule({
@@ -43,7 +45,6 @@ import { AppRoutingModule } from './app-routing.module';
     AddContactComponent,
     CreateGroupComponent,
     GroupsContactsViewComponent,
-    CreateEventComponent,
     EventViewComponent,
     MainpageComponent,
   ],
@@ -62,7 +63,9 @@ import { AppRoutingModule } from './app-routing.module';
     MatNativeDateModule,
     MatInputModule,
     AppRoutingModule,
-     ],
+    MatCardModule,
+    MatButtonModule
+    ],
 
 
   providers: [],

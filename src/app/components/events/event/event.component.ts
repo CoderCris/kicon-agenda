@@ -1,7 +1,7 @@
 import { Component, OnInit, NgZone, Input } from '@angular/core';
 import { db } from 'src/app/services/utils/firebase';
 import * as firebase from 'firebase';
-//import { Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -20,7 +20,7 @@ export class EventComponent implements OnInit {
   date: string;
   time: string;
   contacts: string[];
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() { }
 
@@ -38,6 +38,10 @@ export class EventComponent implements OnInit {
     })
 
     //}
+  }
+  cancel(){
+    //enroutamiento a pagina principal
+    this.router.navigate(['']); 
   }
 
 }

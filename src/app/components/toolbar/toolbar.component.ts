@@ -15,7 +15,7 @@ export class ToolbarComponent implements OnInit {
   }
 
   newEvent(){
-    this.router.navigate(['/createEvent']);
+    this.router.navigate(['/event']);
   }
 
   newContact(){

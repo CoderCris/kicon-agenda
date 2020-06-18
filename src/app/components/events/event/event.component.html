@@ -1,9 +1,10 @@
+<app-toolbar></app-toolbar>
 <div class="container">
 
   <mat-label class="title">Add event</mat-label>
 
   <mat-form-field>
-    <input matInput type="text" name="name" placeholder="name" [(ngModel)]="event_name" />
+    <input matInput type="text" name="name" placeholder="Event name" [(ngModel)]="event_name" />
   </mat-form-field>
 
   <!--
@@ -21,6 +22,13 @@
   <mat-form-field>
     <input matInput type="text" name="contacts" placeholder="contacts" [(ngModel)]="contacts" />
   </mat-form-field>
-  <button matt-button color="primary" (click)="addEvent()">HERE</button>
+  <div class="row">
+    <div class="col">
+      <button mat-raised-button (click)="addEvent()">Accept</button>
+    </div>
+    <div class="col">
+      <button mat-raised-button (click)="cancel()">Cancel</button>
+    </div>
+  </div>
 
 </div>
