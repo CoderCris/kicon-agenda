@@ -36,7 +36,7 @@ export class EventComponent implements OnInit {
       date: this.date,
       contacts: this.contacts,
     })
-
+    this.router.navigate(['']); 
     //}
   }
   cancel(){

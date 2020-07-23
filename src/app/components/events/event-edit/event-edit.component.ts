@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { db } from 'src/app/services/utils/firebase';
 import * as firebase from 'firebase';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-event-edit',
@@ -15,7 +16,7 @@ export class EventEditComponent implements OnInit {
   time: string;
   contacts: string;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.id = "vaHGpYpPvUWtC5DPyzC7";
@@ -57,7 +58,12 @@ export class EventEditComponent implements OnInit {
 
   eraseEvent() {
     db.collection("events").doc(this.id).delete();
+    this.router.navigate(['']); 
+  }
 
+  cancel(){
+    //enroutamiento a pagina principal
+    this.router.navigate(['']); 
   }
 
 }

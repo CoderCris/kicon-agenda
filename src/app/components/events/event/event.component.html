@@ -1,7 +1,9 @@
 <app-toolbar></app-toolbar>
-<div class="container">
 
-  <mat-label class="title">Add event</mat-label>
+<div class="container">
+  <mat-card-header>
+    <mat-card-title>Add event</mat-card-title>
+  </mat-card-header>
 
   <mat-form-field>
     <input matInput type="text" name="name" placeholder="Event name" [(ngModel)]="event_name" />
