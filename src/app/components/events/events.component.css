@@ -1,0 +1,40 @@
+.titleList{
+    font-size: xx-large;
+    margin: 3px;
+    background-color: rgba(255, 255, 255, 0.45);
+    padding: 8px;
+    border-radius: 10px;
+    width: max-content;
+    font-family: 'Lucida Console', Monaco, monospace;
+
+}
+
+.eventList{
+    background-color: rgba(255, 255, 255, 0.45);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.eventContainer{
+    background-color: rgba(255, 255, 255, 0.45);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+mat-card{
+    margin: 5px;
+}
+
+mat-icon{
+    color: black;
+}
+
+.dropdown-toggle::after{
+    display: none;
+}
+
+.dropdown-toggle:hover{
+    background-color: rgba(0,0,0, 0.1);
+}

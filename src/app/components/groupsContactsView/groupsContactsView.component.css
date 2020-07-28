@@ -1,0 +1,15 @@
+.groups{
+    display: flex;
+    flex-direction: column;
+}
+
+mat-divider{
+    color: black;
+    border-top-width: 2px;
+    border-top-color: rgba(0, 0, 0, .45)
+}
+
+mat-tab-label{
+    font-family: 'Lucida Console', Monaco, monospace;
+    font-size: xx-large;
+}
