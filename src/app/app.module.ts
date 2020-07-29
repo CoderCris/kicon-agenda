@@ -34,7 +34,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatTabsModule } from '@angular/material/tabs';
-
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
 @NgModule({
@@ -70,6 +70,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatDividerModule,
     MatTabsModule,
     ReactiveFormsModule,
+    MatCheckboxModule,
     ],
 
 

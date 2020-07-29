@@ -1,8 +1,35 @@
 <app-toolbar></app-toolbar>
-<div class="container">
+<div class="row">
+  <div class="col-md-4"></div>
+  <mat-card class="col-md-4">
     <mat-card-header>
       <mat-card-title>New group</mat-card-title>
     </mat-card-header>
-    
-    
+    <div class="content">
+      <mat-form-field>
+        <mat-label>Group name</mat-label>
+        <input matInput placeholder="Group name" [formControl]="group" required>
+        <mat-error *ngIf="group.invalid">{{isEmpty()}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <label>Contacts for the group</label>
+        <!--Cuando se le dé a aceptar, se guardan los emails del grupo en un array, y en otro los nombres en el mismo orden-->
+        <mat-checkbox>Contacto 1-(Email1) </mat-checkbox>
+        <mat-checkbox>Contacto 2-(Email2) </mat-checkbox>
+        <mat-checkbox>Contacto 3-(Email3) </mat-checkbox>
+        <mat-checkbox>Contacto 4-(Email4) </mat-checkbox>
+      </mat-form-field>
+
+    </div>
+    <div class="row">
+      <div class="col">
+        <button mat-raised-button (click)="addGroup()">Accept</button>
+      </div>
+      <div class="col">
+        <button mat-raised-button (click)="cancel()">Cancel</button>
+      </div>
+    </div>
+  </mat-card>
+  <div class="col-md-4"></div>
 </div>
