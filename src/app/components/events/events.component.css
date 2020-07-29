@@ -5,8 +5,6 @@
     padding: 8px;
     border-radius: 10px;
     width: max-content;
-    font-family: 'Lucida Console', Monaco, monospace;
-
 }
 
 .eventList{
@@ -37,4 +35,40 @@ mat-icon{
 
 .dropdown-toggle:hover{
     background-color: rgba(0,0,0, 0.1);
+}
+
+.date{
+    background-color: rgba(244, 164, 96, 0.5);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 5px;
+}
+
+.day{
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.month{
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+.info{
+    font-size: large;
+}
+
+.title{
+    padding-bottom: 15px;
+}
+
+mat-card{
+    padding: 10px;
+}
+
+.dropdownButton{
+    text-align: center;
 }
