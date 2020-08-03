@@ -1,36 +1,46 @@
 <app-toolbar></app-toolbar>
 
-<div class="container">
-  <mat-card-header>
-    <mat-card-title>Add event</mat-card-title>
-  </mat-card-header>
-
-  <mat-form-field>
-    <input matInput type="text" name="name" placeholder="Event name" [(ngModel)]="event_name" />
-  </mat-form-field>
-
-  <!--
-  <mat-form-field>
-   <input matInput [ngxTimepicker]="endTime" [format]="24" name="time" [(ngModel)]="time"/>
-  </mat-form-field>
-            -->
-  <mat-form-field>
-    <mat-label>Choose a date</mat-label>
-    <input matInput [matDatepicker]="picker" [(ngModel)]="date" name="date" required>
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
-  </mat-form-field>
-
-  <mat-form-field>
-    <input matInput type="text" name="contacts" placeholder="contacts" [(ngModel)]="contacts" />
-  </mat-form-field>
-  <div class="row">
-    <div class="col">
-      <button mat-raised-button (click)="addEvent()">Accept</button>
+<div class="row">
+  <div class="col-md-3"></div>
+  <mat-card class="col-md-6">
+    <mat-card-header>
+      <mat-card-title>Add event</mat-card-title>
+    </mat-card-header>
+    <div class="row">
+      <mat-form-field class="col">
+        <input matInput type="text" name="name" placeholder="Event name" [(ngModel)]="event_name" />
+      </mat-form-field>
     </div>
-    <div class="col">
-      <button mat-raised-button (click)="cancel()">Cancel</button>
+    <div class="marginB"></div>
+    <!--
+      <mat-form-field>
+        <input matInput [ngxTimepicker]="endTime" [format]="24" name="time" [(ngModel)]="time"/>
+      </mat-form-field>
+    -->
+    <div class="row">
+      <mat-form-field class="col">
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker" [(ngModel)]="date" name="date" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
     </div>
-  </div>
+    <div class="marginB"></div>
+    <div class="row">
+      <mat-form-field class="col">
+        <input matInput type="text" name="contacts" placeholder="Contacts" [(ngModel)]="contacts" />
+      </mat-form-field>
+    </div>
+    <div class="marginB"></div>
 
+    <div class="row">
+      <div class="col">
+        <button mat-raised-button (click)="addEvent()">Accept</button>
+      </div>
+      <div class="col">
+        <button mat-raised-button (click)="cancel()">Cancel</button>
+      </div>
+    </div>
+  </mat-card>
+  <div class="col-md-3"></div>
 </div>

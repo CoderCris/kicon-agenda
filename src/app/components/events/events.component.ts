@@ -1,4 +1,5 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router'
 import { db } from 'src/app/services/utils/firebase';
 import * as firebase from 'firebase';
 
@@ -19,7 +20,7 @@ export class EventsComponent {
   //@ViewChild(DialogComponent) modal: DialogComponent;
   panelOpenState = false;
 
-  constructor(private firestore: AngularFirestore) { 
+  constructor(private firestore: AngularFirestore, private router: Router) { 
 
     this.events = firestore.collection('events').valueChanges({ idField: 'eventId'});
     console.log('los eventos se cargan')
@@ -32,6 +33,10 @@ export class EventsComponent {
     }).catch(function(error){
       console.log('ERROR: algo falló en la eliminación');
     });
+  }
+
+  editEvent(){
+    this.router.navigate(['editEvent'])
   }
 
 }
