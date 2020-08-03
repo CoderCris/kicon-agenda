@@ -23,7 +23,7 @@ import { EventEditComponent } from './components/events/event-edit/event-edit.co
 import { MainpageComponent } from './components/mainpage/mainpage.component'
 
 /** Materials Modules */
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule, BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -71,6 +71,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatTabsModule,
     ReactiveFormsModule,
     MatCheckboxModule,
+    BrowserAnimationsModule
     ],
 
 

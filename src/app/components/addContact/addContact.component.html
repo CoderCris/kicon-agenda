@@ -5,27 +5,26 @@
         <mat-card-header>
             <mat-card-title>New contact</mat-card-title>
         </mat-card-header>
-        <div class="content">
-            <mat-form-field>
-                <mat-label>Name</mat-label>
-                <input matInput placeholder="Contact name" [formControl]="contact" required>
-                <mat-error *ngIf="contact.invalid">{{isEmpty()}}</mat-error>
-            </mat-form-field>
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Contact name" [formControl]="contact" required>
+            <mat-error *ngIf="contact.invalid">{{isEmpty()}}</mat-error>
+        </mat-form-field>
 
-            <mat-form-field appearance="fill">
-                <mat-label>Enter your email</mat-label>
-                <input matInput placeholder="email@example.com" [formControl]="email" required>
-                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-            </mat-form-field>
-        </div>
+        <mat-form-field appearance="fill">
+            <mat-label>Enter your email</mat-label>
+            <input matInput placeholder="email@example.com" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        
         <div class="row">
             <div class="col">
-              <button mat-raised-button (click)="addContact()">Accept</button>
+                <button mat-raised-button (click)="addContact()">Accept</button>
             </div>
             <div class="col">
-              <button mat-raised-button (click)="cancel()">Cancel</button>
+                <button mat-raised-button (click)="cancel()">Cancel</button>
             </div>
-          </div>
+        </div>
     </mat-card>
     <div class="col-md-4"></div>
 </div>

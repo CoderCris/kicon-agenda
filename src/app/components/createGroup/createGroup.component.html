@@ -12,17 +12,26 @@
         <mat-error *ngIf="group.invalid">{{isEmpty()}}</mat-error>
       </mat-form-field>
 
-      <mat-form-field>
-        <label>Contacts for the group</label>
-        <!--Cuando se le dé a aceptar, se guardan los emails del grupo en un array, y en otro los nombres en el mismo orden-->
-        <mat-checkbox>Contacto 1-(Email1) </mat-checkbox>
-        <mat-checkbox>Contacto 2-(Email2) </mat-checkbox>
-        <mat-checkbox>Contacto 3-(Email3) </mat-checkbox>
-        <mat-checkbox>Contacto 4-(Email4) </mat-checkbox>
-      </mat-form-field>
+      <!--Cuando se le dé a aceptar, se guardan los emails del grupo en un array, y en otro los nombres en el mismo orden-->
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <label class="marginBottom">Contacts for the group</label>
+          <mat-checkbox>Contacto 1-(Email1) </mat-checkbox>
+          <mat-checkbox>Contacto 2-(Email2) </mat-checkbox>
+          <mat-checkbox>Contacto 3-(Email3) </mat-checkbox>
+          <mat-checkbox>Contacto 4-(Email4) </mat-checkbox>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+      <!--<div *ngFor="let contact of contacts" >
+          <mat-checkbox>
+            {{contact.name}} - {{contact.email}}
+          </mat-checkbox>
+       </div>-->
 
     </div>
-    <div class="row">
+    <div class="row center">
       <div class="col">
         <button mat-raised-button (click)="addGroup()">Accept</button>
       </div>
