@@ -1,3 +1,14 @@
+<div class="dirtyTests">
+<h1>Eventos  TEST</h1>
+    <div *ngFor='let event of events | async'>
+        
+        <p>{{event.name}}</p>
+        <p>{{event.date}}</p>
+        <hr>
+    </div>
+</div>
+
+
 <div class="titleList">
     Events
 </div>
@@ -44,3 +55,15 @@
     <!--</div>-->
     <!--Fin microview evento-->
 </div>
+
+
+<!-- aprox como se iteraría sobre la colección "events"-->
+
+<!-- <h1> Eventos<h1>-->
+<!-- <ul class="events"> -->
+<!--  <li *ngFor="let event of events">-->
+<!--       {{event.name}}
+            {{event.date}}
+            {{event.contacts}} *contacts será un mapa -->
+<!--   </li>-->
+<!--  </ul>-->
