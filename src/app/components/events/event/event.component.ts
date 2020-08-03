@@ -36,6 +36,9 @@ export class EventComponent implements OnInit {
       date: this.date,
       contacts: this.contacts,
     })
+
+    console.log('added!!!');
+
     this.router.navigate(['']); 
     //}
   }

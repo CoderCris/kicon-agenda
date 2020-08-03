@@ -1,16 +1,38 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router'
+import { db } from 'src/app/services/utils/firebase';
+import * as firebase from 'firebase';
+
+import { Observable } from 'rxjs';
+import { AngularFirestore } from '@angular/fire/firestore'
+
 
 @Component({
   selector: 'app-events',
   templateUrl: './events.component.html',
   styleUrls: ['./events.component.css']
 })
-export class EventsComponent implements OnInit {
+export class EventsComponent {
 
-  constructor(private router:Router) { }
+  public events: Observable<any[]>;
+  public cat: Observable<any[]>;
+  categoryValue$: boolean=false;
+  //@ViewChild(DialogComponent) modal: DialogComponent;
+  panelOpenState = false;
 
-  ngOnInit(): void {
+  constructor(private firestore: AngularFirestore, private router: Router) { 
+
+    this.events = firestore.collection('events').valueChanges({ idField: 'eventId'});
+    console.log('los eventos se cargan')
+
+  }
+
+  remove(id_event){
+    db.collection('events').doc(id_event).delete().then(function(){
+      console.log('Evento eliminado');
+    }).catch(function(error){
+      console.log('ERROR: algo falló en la eliminación');
+    });
   }
 
   editEvent(){
