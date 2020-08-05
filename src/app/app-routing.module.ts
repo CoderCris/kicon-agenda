@@ -8,7 +8,7 @@ import { CreateGroupComponent } from './components/createGroup/createGroup.compo
 import { GroupsContactsViewComponent } from './components/groupsContactsView/groupsContactsView.component';
 import { EventViewComponent } from './components/eventView/eventView.component';
 import { MainpageComponent } from './components/mainpage/mainpage.component'
-import { ContactViewComponent } from './components/contactView/contactView.component'
+import { GroupViewComponent } from './components/groupView/groupView.component'
 
 const routes: Routes = [
     {path: '', component: MainpageComponent},
@@ -18,7 +18,8 @@ const routes: Routes = [
     {path: 'createGroup', component: CreateGroupComponent},
     {path: 'groupsContactsView', component: GroupsContactsViewComponent},
     {path: 'eventView', component: EventViewComponent},
-    {path: 'contactView', component:ContactViewComponent}
+    {path: 'groupView', component:GroupViewComponent}
+
 ]
 
 @NgModule({
