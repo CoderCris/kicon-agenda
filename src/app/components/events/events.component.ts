@@ -23,7 +23,6 @@ export class EventsComponent {
   constructor(private firestore: AngularFirestore, private router: Router) { 
 
     this.events = firestore.collection('events').valueChanges({ idField: 'eventId'});
-    console.log('los eventos se cargan')
 
   }
 

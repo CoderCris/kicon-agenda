@@ -19,7 +19,7 @@ export class EventComponent implements OnInit {
   event_name: string;
   date: string;
   time: string;
-  contacts: string[];
+  contacts: string;
   constructor(private router: Router) { }
 
   ngOnInit() { }
@@ -28,19 +28,27 @@ export class EventComponent implements OnInit {
 
     //var user = firebase.auth().currentUser;
 
-    //if(user){
+    if(this.contacts === undefined){
+      
+      db.collection("events").add({
 
-    db.collection("events").add({
+        name: this.event_name,
+        date: this.date,
+               
+      })
 
-      name: this.event_name,
-      date: this.date,
-      contacts: this.contacts,
-    })
+    } else {
 
-    console.log('added!!!');
+      db.collection("events").add({
+
+        name: this.event_name,
+        date: this.date,
+        contacts: this.contacts
+        
+      })
+    }
 
     this.router.navigate(['']); 
-    //}
   }
   cancel(){
     //enroutamiento a pagina principal
