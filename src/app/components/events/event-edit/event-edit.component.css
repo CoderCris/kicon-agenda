@@ -1,9 +1,19 @@
-.container {
-  width: 50%;
-  margin: auto;
-  display: grid;
-  padding: 30px;
-  margin-top: 150px;
-  background-color: rgb(245, 245, 245);
-  box-shadow: 2px 2px 10px rgb(223, 223, 223);
+.color1{
+    background-color: rosybrown;
+    padding-top: 50px;
+}
+
+.color2{
+    background-color: royalblue;
+    padding-top: 50px;
+}
+
+.color3{
+    background-color: seagreen;
+    padding-top: 25px;
+}
+
+.color4{
+    background-color: slategrey;
+    padding-top: 25px;
 }
