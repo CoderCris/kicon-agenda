@@ -21,6 +21,9 @@ import { GroupsContactsViewComponent } from './components/groupsContactsView/gro
 import { EventViewComponent } from './components/eventView/eventView.component';
 import { EventEditComponent } from './components/events/event-edit/event-edit.component'
 import { MainpageComponent } from './components/mainpage/mainpage.component'
+import { GroupViewComponent } from './components/groupView/groupView.component'
+import { NewPollComponent } from './components/newPoll/newPoll.component'
+import { PollComponent } from './components/poll/poll.component'
 
 /** Materials Modules */
 import { NoopAnimationsModule, BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -36,7 +39,6 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +51,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     GroupsContactsViewComponent,
     EventViewComponent,
     MainpageComponent,
+    GroupViewComponent,
+    NewPollComponent,
+    PollComponent
   ],
   imports: [
     BrowserModule,

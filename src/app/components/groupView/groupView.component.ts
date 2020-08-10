@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GroupViewComponent implements OnInit {
 
+  contacts = ['Carlota Perez - carlope@gmail.com', 'Paco Díaz - pacodiaz@hotmail.es', 'Lolita Pluma - lalola@outlook.com'];
+
   constructor() { }
 
   ngOnInit(): void {

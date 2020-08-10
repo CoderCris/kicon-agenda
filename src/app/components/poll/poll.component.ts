@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './poll.component.html',
   styleUrls: ['./poll.component.css']
 })
-export class NewPollComponent implements OnInit {
+export class PollComponent implements OnInit {
 
   constructor() { }
 
