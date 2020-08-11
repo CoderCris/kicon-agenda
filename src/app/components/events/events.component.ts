@@ -1,10 +1,11 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Inject } from '@angular/core';
 import { Router } from '@angular/router'
 import { db } from 'src/app/services/utils/firebase';
 import * as firebase from 'firebase';
 
 import { Observable } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/firestore'
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 
 @Component({
@@ -20,7 +21,9 @@ export class EventsComponent {
   //@ViewChild(DialogComponent) modal: DialogComponent;
   panelOpenState = false;
 
-  constructor(private firestore: AngularFirestore, private router: Router) { 
+  constructor(private firestore: AngularFirestore, 
+              private router: Router,
+              public dialog: MatDialog) { 
 
     this.events = firestore.collection('events').valueChanges({ idField: 'eventId'});
     console.log('los eventos se cargan')
@@ -39,4 +42,22 @@ export class EventsComponent {
     this.router.navigate(['editEvent'])
   }
 
+
+  openDialog(): void{
+    const dialogRef = this.dialog.open(DialogEvent, {
+      width: '1000px',
+      data: { event:this.events} //Ver como pasarle el evento al dialog
+    })
+  }
+
+}
+
+@Component({
+  selector: 'eventViewDialog',
+  templateUrl: 'eventDialog.html'
+})
+export class DialogEvent {
+  constructor(
+    public dialogRef: MatDialogRef<DialogEvent>,
+    @Inject(MAT_DIALOG_DATA) public data: EventsComponent) {}
 }
