@@ -27,15 +27,17 @@ export class EventsComponent {
   }
 
   remove(id_event){
+   
     db.collection('events').doc(id_event).delete().then(function(){
       console.log('Evento eliminado');
     }).catch(function(error){
       console.log('ERROR: algo falló en la eliminación');
     });
+    
   }
 
   editEvent(){
-    this.router.navigate(['editEvent'])
+    this.router.navigate(['event-edit'])
   }
 
 }
