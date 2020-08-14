@@ -3,7 +3,9 @@
     <div *ngFor='let event of events | async'>
         
         <p>{{event.name}}</p>
-        <p>{{event.date}}</p>
+        <p>{{event.date.toDate() | date:'yyyy/MM/dd h:mm:ss a'}}</p>
+        <button (click)="remove(event.eventId)">ReMOve</button>
+        <button (click)="editEvent()">EDit</button>
         <hr>
     </div>
 </div>
@@ -48,13 +50,3 @@
 </div>
 
 
-<!-- aprox como se iteraría sobre la colección "events"-->
-
-<!-- <h1> Eventos<h1>-->
-<!-- <ul class="events"> -->
-<!--  <li *ngFor="let event of events">-->
-<!--       {{event.name}}
-            {{event.date}}
-            {{event.contacts}} *contacts será un mapa -->
-<!--   </li>-->
-<!--  </ul>-->
