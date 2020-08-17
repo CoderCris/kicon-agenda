@@ -40,7 +40,7 @@ export class EventsComponent {
   }
 
   editEvent(){
-    this.router.navigate(['event-edit'])
+    this.router.navigate(['editEvent'])
   }
 
 

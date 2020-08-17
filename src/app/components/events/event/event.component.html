@@ -27,10 +27,27 @@
     </div>
     <div class="marginB"></div>
     <div class="row">
-      <!--<mat-form-field class="col">
-        <input matInput type="text" name="contacts" placeholder="Contacts" [(ngModel)]="contacts" />
-
-      </mat-form-field>-->
+      <mat-form-field class="col">
+        <mat-label>Choose an hour</mat-label>
+        <select matNativeControl required>
+          <option label="--select hour --"></option>
+          <option value="0">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+      </mat-form-field>
+    </div>
+    <div class="marginB"></div>
+    <div class="row">
+      <mat-form-field class="col">
+        <mat-label>Choose the minutes</mat-label>
+        <select matNativeControl required>
+          <option label="--select minutes --"></option>
+          <option value="0">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+      </mat-form-field>
     </div>
     <div class="marginB"></div>
 

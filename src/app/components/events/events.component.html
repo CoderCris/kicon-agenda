@@ -1,9 +1,9 @@
 <div class="dirtyTests">
-<h1>Eventos  TEST</h1>
+    <h1>Eventos TEST</h1>
     <div *ngFor='let event of events | async'>
-        
+
         <p>{{event.name}}</p>
-        <p>{{event.date.toDate() | date:'yyyy/MM/dd h:mm:ss a'}}</p>
+        <p>{{event.date.toDate() | date:'dd/MM/yyyy h:mm:ss a'}}</p>
         <button (click)="remove(event.eventId)">ReMOve</button>
         <button (click)="editEvent()">EDit</button>
         <hr>
@@ -14,39 +14,40 @@
 <div class="titleList">
     Events
 </div>
-<div class="eventList"> 
+<div class="eventList">
     <!-- Crear un for para que se vaya rellenando con todos los datos-->
-    <mat-card class="row" (click)="openDialog()">
-        <div class="date col-md-4">
-            <div class="day">
-                24
-            </div>
-            <div class="month">
-                July
-            </div>
-        </div>
-        <div class="info col-md-8">
-            <div class="title">
-                Santo de Cris
-            </div>
-            <div class="countdown">Vacio por ahora</div>
-            <div class="row dropdownButton">
-                <div class="col-md-9">
-
+    <div *ngFor='let event of events | async'>
+        <mat-card class="row">
+            <div class="date col-md-4">
+                <div class="day">
+                    {{event.date.toDate() | date:'dd/MM/yyyy'}}
                 </div>
-                <div class="col-md-3">
-                    <a class="nav-link dropdown-toggle" href="#" id="eventDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <mat-icon class="add-icon" aria-hidden="false" aria-label="Example add icon">more_horiz</mat-icon>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="eventDropdown">
-                        <a class="dropdown-item" (click)="editEvent()">Edit</a>
-                        <a class="dropdown-item">Delete</a>
+                <div class="month">
+                    {{event.date.toDate() | date:'h:mm a'}}
+                </div>
+            </div>
+            <div class="info col-md-8">
+                <div class="title" (click)="openDialog()">
+                    {{event.name}}
+                </div>
+                <div class="row dropdownButton">
+                    <div class="col-md-9">
+
+                    </div>
+                    <div class="col-md-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="eventDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <mat-icon class="add-icon" aria-hidden="false" aria-label="Example add icon">more_horiz
+                            </mat-icon>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="eventDropdown">
+                            <a class="dropdown-item" (click)="editEvent()">Edit</a>
+                            <a class="dropdown-item" (click)="remove($event.eventId)">Delete</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </mat-card>
+        </mat-card>
+    </div>
     <!--Fin microview evento-->
 </div>
-
-
