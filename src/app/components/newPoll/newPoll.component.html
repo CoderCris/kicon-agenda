@@ -7,18 +7,37 @@
                 <mat-card-title>New Poll</mat-card-title>
             </mat-card-header>
             <mat-card-content>
-                <mat-form-field appearance="fill">
-                    <mat-label>Question</mat-label>
-                    <input matInput>
-                </mat-form-field>
-                  <mat-form-field appearance="fill">
-                    <mat-label>Answer 1</mat-label>
-                    <input matInput>
-                </mat-form-field>
+                <div class="col-md-4"></div>
+                <div class="row">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Question</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4"></div>
+
+                <div class="row">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Answer 1</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4"></div>
+
+                <div class="row">
                 <mat-form-field appearance="fill">
                     <mat-label>Answer 2</mat-label>
                     <input matInput>
                 </mat-form-field>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button mat-raised-button (click)="addPoll()">Accept</button>
+                </div>
+                <div class="col">
+                    <button mat-raised-button (click)="cancel()">Cancel</button>
+                </div>
+            </div>
             </mat-card-content>
         </mat-card>
     </div>

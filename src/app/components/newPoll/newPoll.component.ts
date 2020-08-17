@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-newpoll',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewPollComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+  addPoll(){
+    //Falta meter en la bbdd
+    this.router.navigate(['']); 
+  }
+
+  cancel(){
+    this.router.navigate(['']); 
   }
 
 }

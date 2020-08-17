@@ -1,16 +1,3 @@
-<div class="dirtyTests">
-    <h1>Eventos TEST</h1>
-    <div *ngFor='let event of events | async'>
-
-        <p>{{event.name}}</p>
-        <p>{{event.date.toDate() | date:'dd/MM/yyyy h:mm:ss a'}}</p>
-        <button (click)="remove(event.eventId)">ReMOve</button>
-        <button (click)="editEvent()">EDit</button>
-        <hr>
-    </div>
-</div>
-
-
 <div class="titleList">
     Events
 </div>

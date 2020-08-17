@@ -9,6 +9,7 @@ import { GroupsContactsViewComponent } from './components/groupsContactsView/gro
 import { EventViewComponent } from './components/eventView/eventView.component';
 import { MainpageComponent } from './components/mainpage/mainpage.component'
 import { GroupViewComponent } from './components/groupView/groupView.component'
+import { NewPollComponent } from './components/newPoll/newPoll.component';
 
 const routes: Routes = [
     {path: '', component: MainpageComponent},
@@ -18,7 +19,8 @@ const routes: Routes = [
     {path: 'createGroup', component: CreateGroupComponent},
     {path: 'groupsContactsView', component: GroupsContactsViewComponent},
     {path: 'eventView', component: EventViewComponent},
-    {path: 'groupView', component:GroupViewComponent}
+    {path: 'groupView', component:GroupViewComponent},
+    {path: 'newPoll', component:NewPollComponent}
 
 ]
 
