@@ -47,7 +47,7 @@ export class EventsComponent {
   openDialog(): void{
     const dialogRef = this.dialog.open(DialogEvent, {
       width: '1000px',
-      data: { event:this.events} //Ver como pasarle el evento al dialog
+      data: { } //Ver como pasarle el evento al dialog
     })
   }
 
