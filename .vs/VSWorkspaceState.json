@@ -4,11 +4,13 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\components",
+    "\\src\\app\\components\\addContact",
+    "\\src\\app\\components\\createGroup",
     "\\src\\app\\components\\events",
     "\\src\\app\\services",
     "\\src\\app\\services\\utils",
     "\\src\\environments"
   ],
-  "SelectedNode": "\\src\\app\\components\\events\\eventDialog.html",
+  "SelectedNode": "\\src\\app\\components\\events\\events.component.ts",
   "PreviewInSolutionExplorer": false
 }

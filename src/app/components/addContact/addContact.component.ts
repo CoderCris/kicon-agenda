@@ -43,7 +43,7 @@ export class AddContactComponent implements OnInit {
       name: this.name,
       type: 'person'
     })
-    //Falta meter en la bbdd
+    console.log('addedContact');
     this.router.navigate(['']); 
   }
 

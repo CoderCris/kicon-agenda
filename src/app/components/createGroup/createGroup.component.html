@@ -1,4 +1,13 @@
 <app-toolbar></app-toolbar>
+
+<div class="test">
+  <h1>Create test</h1>
+  <div *ngFor="let contact of contacts | async">
+
+    {{contact.name }} --- {{contact.mail }}
+
+  </div>
+</div>
 <div class="row">
   <div class="col-md-4"></div>
   <mat-card class="col-md-4">
