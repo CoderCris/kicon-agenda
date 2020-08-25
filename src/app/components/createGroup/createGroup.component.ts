@@ -9,10 +9,19 @@ import * as firebase from 'firebase';
 import { Observable } from 'rxjs';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
+import { Pipe, PipeTransform } from '@angular/core';
+
 @Component({
   selector: 'app-creategroup',
   templateUrl: './createGroup.component.html',
   styleUrls: ['./createGroup.component.css']
+})
+
+@Pipe({
+
+  name: 'filter',
+  pure: false
+
 })
 export class CreateGroupComponent implements OnInit {
 
@@ -24,7 +33,7 @@ export class CreateGroupComponent implements OnInit {
   constructor(private firestore: AngularFirestore,
     private router: Router,
     public dialog: MatDialog) {
-    //this.contacts = db.collection('agenda').where("type", "==", "person").get();
+    this.contacts = firestore.collection('agenda').valueChanges({ idField: 'eventId' });
   }
 
   ngOnInit(): void {
