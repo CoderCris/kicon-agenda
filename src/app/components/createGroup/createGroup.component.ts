@@ -17,12 +17,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   styleUrls: ['./createGroup.component.css']
 })
 
-@Pipe({
 
-  name: 'filter',
-  pure: false
-
-})
 export class CreateGroupComponent implements OnInit {
 
   groupName: string;

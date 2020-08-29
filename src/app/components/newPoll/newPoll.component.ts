@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { db } from 'src/app/services/utils/firebase';
+import * as firebase from 'firebase';
 
 
 @Component({
@@ -9,12 +11,35 @@ import { Router } from '@angular/router';
 })
 export class NewPollComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  question: string;
+  opt1: string;
+  opt2: string;
+
+  constructor(private router: Router) {
+
+
+  }
 
   ngOnInit(): void {
   }
-  addPoll(){
-    //Falta meter en la bbdd
+
+  addPoll() {
+
+    db.collection("poll").add({
+
+      question: this.question,
+      opt1: this.opt1,
+      intOpt1: 0,
+      intOpt2: 0,
+      opt2: this.opt2,
+      eventRef: history.state.data
+    });
+
+    db.collection("events").doc(history.state.data).set({
+
+      poll : true
+
+    })
     this.router.navigate(['']); 
   }
 

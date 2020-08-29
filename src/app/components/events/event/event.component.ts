@@ -18,7 +18,8 @@ export class EventComponent implements OnInit {
 
   event_name: string;
   date: string;
-  time: string;
+  hour: string;
+  minutes: string;
   contacts: string;
   constructor(private router: Router) { }
 
@@ -34,6 +35,8 @@ export class EventComponent implements OnInit {
 
         name: this.event_name,
         date: this.date,
+        hour: this.hour,
+        minutes: this.minutes 
                
       })
 
@@ -43,7 +46,9 @@ export class EventComponent implements OnInit {
 
         name: this.event_name,
         date: this.date,
-        contacts: this.contacts
+        contacts: this.contacts,
+        hour: this.hour,
+        minutes: this.minutes 
         
       })
     }

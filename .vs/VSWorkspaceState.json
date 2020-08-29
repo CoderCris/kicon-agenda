@@ -4,13 +4,12 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\components",
-    "\\src\\app\\components\\addContact",
-    "\\src\\app\\components\\createGroup",
     "\\src\\app\\components\\events",
-    "\\src\\app\\services",
-    "\\src\\app\\services\\utils",
-    "\\src\\environments"
+    "\\src\\app\\components\\events\\event",
+    "\\src\\app\\components\\events\\event-edit",
+    "\\src\\app\\components\\newPoll",
+    "\\src\\app\\components\\poll"
   ],
-  "SelectedNode": "\\src\\app\\components\\createGroup\\createGroup.component.ts",
+  "SelectedNode": "\\src\\app\\components\\newPoll\\newPoll.component.ts",
   "PreviewInSolutionExplorer": false
 }
