@@ -26,7 +26,7 @@ export class EventsComponent {
               public dialog: MatDialog) { 
 
     this.events = firestore.collection('events').valueChanges({ idField: 'eventId'});
-
+    //if(event.poll === undefined){no cargar poll}
   }
 
   remove(id_event){
@@ -61,15 +61,16 @@ export class EventsComponent {
 })
 export class DialogEvent {
 
-  myEvent: Promise<firebase.firestore.DocumentSnapshot<firebase.firestore.DocumentData>>;
+  myEvent: Observable<any>;
 
   constructor(
+    private firestore: AngularFirestore,
     private router: Router,
     public dialogRef: MatDialogRef<DialogEvent>,
     @Inject(MAT_DIALOG_DATA) public data: EventsComponent) {
 
     console.log(this.data);
-    this.myEvent = db.collection("events").doc(this.data.toString()).get();
+    this.myEvent = firestore.collection('events').doc(this.data.toString()).valueChanges();
     //if ()
     //const thisEvent = db.collection('events').doc(this.data).get();
 

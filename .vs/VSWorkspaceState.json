@@ -5,11 +5,9 @@
     "\\src\\app",
     "\\src\\app\\components",
     "\\src\\app\\components\\events",
-    "\\src\\app\\components\\events\\event",
-    "\\src\\app\\components\\events\\event-edit",
     "\\src\\app\\components\\newPoll",
     "\\src\\app\\components\\poll"
   ],
-  "SelectedNode": "\\src\\app\\components\\newPoll\\newPoll.component.ts",
+  "SelectedNode": "\\src\\app\\components\\events\\events.component.ts",
   "PreviewInSolutionExplorer": false
 }
