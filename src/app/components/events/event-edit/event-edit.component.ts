@@ -13,14 +13,14 @@ export class EventEditComponent implements OnInit {
   id: string; //para registrar el evento a editar
   event_name: string;
   date: string;
-  time: string;
+  hour: string;
+  minutes: string;
   contacts: string;
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    this.id = "vaHGpYpPvUWtC5DPyzC7";
-
+    this.id = history.state.data;
   }
 
   editName() {
@@ -43,7 +43,8 @@ export class EventEditComponent implements OnInit {
   editTime() {
     db.collection("events").doc(this.id).set({
 
-      time: this.time,
+      hour: this.hour,
+      minutes: this.minutes
     })
 
   }

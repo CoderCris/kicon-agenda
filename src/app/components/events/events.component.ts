@@ -26,7 +26,7 @@ export class EventsComponent {
               public dialog: MatDialog) { 
 
     this.events = firestore.collection('events').valueChanges({ idField: 'eventId'});
-
+    //if(event.poll === undefined){no cargar poll}
   }
 
   remove(id_event){
@@ -39,15 +39,17 @@ export class EventsComponent {
     
   }
 
-  editEvent(){
-    this.router.navigate(['editEvent'])
+  editEvent(eventId) {
+
+    this.router.navigate(['editEvent'], { state: {data: eventId}});
+
   }
 
 
-  openDialog(): void{
+  openDialog(eventId: string): void{
     const dialogRef = this.dialog.open(DialogEvent, {
       width: '1000px',
-      data: { } //Ver como pasarle el evento al dialog
+      data: eventId //Ver como pasarle el evento al dialog
     })
   }
 
@@ -58,7 +60,25 @@ export class EventsComponent {
   templateUrl: 'eventDialog.html'
 })
 export class DialogEvent {
+
+  myEvent: Observable<any>;
+
   constructor(
+    private firestore: AngularFirestore,
+    private router: Router,
     public dialogRef: MatDialogRef<DialogEvent>,
-    @Inject(MAT_DIALOG_DATA) public data: EventsComponent) {}
+    @Inject(MAT_DIALOG_DATA) public data: EventsComponent) {
+
+    console.log(this.data);
+    this.myEvent = firestore.collection('events').doc(this.data.toString()).valueChanges();
+    //if ()
+    //const thisEvent = db.collection('events').doc(this.data).get();
+
+  }
+
+  addPoll() {
+
+    this.router.navigate(['newPoll'], { state: { data: this.data } });
+    this.dialogRef.close();
+  }
 }

@@ -2,26 +2,38 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 
+
 import { AngularFirestore } from '@angular/fire/firestore';
 import { db } from 'src/app/services/utils/firebase';
 import * as firebase from 'firebase';
+import { Observable } from 'rxjs';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+
+import { Pipe, PipeTransform } from '@angular/core';
 
 @Component({
   selector: 'app-creategroup',
   templateUrl: './createGroup.component.html',
   styleUrls: ['./createGroup.component.css']
 })
+
+
 export class CreateGroupComponent implements OnInit {
 
-  contacts = new Map<string, string>();
+  groupName: string;
+  group = new FormControl('', [Validators.required]);
+  contacts: Observable<any[]>;
+ 
 
-  constructor(private router: Router) { }
-
-  ngOnInit(): void {
+  constructor(private firestore: AngularFirestore,
+    private router: Router,
+    public dialog: MatDialog) {
+    this.contacts = firestore.collection('agenda').valueChanges({ idField: 'eventId' });
   }
 
-  groupName: string;
-  group = new FormControl('',  [Validators.required]);
+  ngOnInit(): void {
+
+  }
 
   isEmpty() {
     if (this.group.hasError('required')) {

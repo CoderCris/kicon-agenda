@@ -10,11 +10,11 @@
                     {{event.date.toDate() | date:'dd/MM/yyyy'}}
                 </div>
                 <div class="month">
-                    {{event.date.toDate() | date:'h:mm a'}}
+                  {{event.hour}} : {{event.minutes}}
                 </div>
             </div>
             <div class="info col-md-8">
-                <div class="title" (click)="openDialog()">
+                <div class="title" (click)="openDialog(event.eventId)">
                     {{event.name}}
                 </div>
                 <div class="row dropdownButton">
@@ -28,7 +28,7 @@
                             </mat-icon>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="eventDropdown">
-                            <a class="dropdown-item" (click)="editEvent()">Edit</a>
+                            <a class="dropdown-item" (click)="editEvent(event.eventId)">Edit</a>
                             <a class="dropdown-item" (click)="remove(event.eventId)">Delete</a>
                         </div>
                     </div>
