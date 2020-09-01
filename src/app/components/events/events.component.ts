@@ -29,6 +29,8 @@ export class EventsComponent {
     //if(event.poll === undefined){no cargar poll}
   }
 
+  
+
   remove(id_event){
    
     db.collection('events').doc(id_event).delete().then(function(){
@@ -49,7 +51,7 @@ export class EventsComponent {
   openDialog(eventId: string): void{
     const dialogRef = this.dialog.open(DialogEvent, {
       width: '1000px',
-      data: eventId //Ver como pasarle el evento al dialog
+      data: eventId 
     })
   }
 

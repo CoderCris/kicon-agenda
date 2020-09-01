@@ -50,11 +50,19 @@ mat-icon{
     font-weight: bolder;
 }
 
-.month{
+.time{
     text-align: center;
     font-size: x-large;
     font-weight: bold;
     padding-top: 15px;
+}
+
+.tablecell{
+    display: table-cell;
+}
+
+.paddingleft{
+    padding-left:15px;
 }
 
 .info{
