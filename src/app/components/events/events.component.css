@@ -72,3 +72,19 @@ mat-card{
 .dropdownButton{
     text-align: center;
 }
+
+@media only screen and (max-width: 600px){
+    .day{
+        font-size: x-large;
+    }
+    .title{
+        margin-top: 10px;
+    }
+
+    .dropdown-item{
+        font-size: medium;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+}
