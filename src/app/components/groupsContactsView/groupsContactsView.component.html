@@ -1,23 +1,15 @@
 <mat-tab-group mat-align-tabs="end">
     <div class="content">
         <mat-tab label="Contacts">
-            <div class="line">
-                <mat-icon class="person-icon" aria-hidden="false" aria-label="Example person icon">person</mat-icon>
-                Lola Pérez
+            <div *ngFor="let contact of contacts | async">
+                <div class="line">
+                    <mat-icon class="person-icon" aria-hidden="false" aria-label="Example person icon">person</mat-icon>
+                    {{contact.name}} - {{contact.mail}}
+                </div>
+                <mat-divider></mat-divider>
             </div>
-            <mat-divider></mat-divider>
-            <div class="line">
-                <mat-icon class="person-icon" aria-hidden="false" aria-label="Example person icon">person</mat-icon>
-                Juan Gutierrez
-            </div>
-            <mat-divider></mat-divider>
-            <div class="line">
-                <mat-icon class="person-icon" aria-hidden="false" aria-label="Example person icon">person</mat-icon>
-                Carlos Martínez
-            </div>
-            <mat-divider></mat-divider>
         </mat-tab>
-        <mat-tab label="Groups"> <!--Meter diálogos con los grupos y su información-->
+        <mat-tab label="Groups">
             <div class="line">
                 <a href="#">
                     <mat-icon class="group-icon" aria-hidden="false" aria-label="Example group icon">group</mat-icon>
@@ -26,7 +18,7 @@
             </div>
             <mat-divider></mat-divider>
             <div class="line">
-                <a href="#" >
+                <a href="#">
                     <mat-icon class="group-icon" aria-hidden="false" aria-label="Example group icon">group</mat-icon>
                     Familia
                 </a>

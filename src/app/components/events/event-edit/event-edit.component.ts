@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { db } from 'src/app/services/utils/firebase';
 import * as firebase from 'firebase';
 import { Router } from '@angular/router';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-event-edit',
@@ -16,6 +17,7 @@ export class EventEditComponent implements OnInit {
   hour: string;
   minutes: string;
   contacts: string;
+  edit = new FormControl('', [Validators.required]);
 
   constructor(private router: Router) { }
 
@@ -66,5 +68,6 @@ export class EventEditComponent implements OnInit {
     //enroutamiento a pagina principal
     this.router.navigate(['']); 
   }
+
 
 }
