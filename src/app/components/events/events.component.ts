@@ -8,6 +8,7 @@ import { AngularFirestore } from '@angular/fire/firestore'
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 
+
 @Component({
   selector: 'app-events',
   templateUrl: './events.component.html',
@@ -26,7 +27,6 @@ export class EventsComponent {
               public dialog: MatDialog) { 
 
     this.events = firestore.collection('events').valueChanges({ idField: 'eventId'});
-    //if(event.poll === undefined){no cargar poll}
   }
 
 
@@ -64,7 +64,7 @@ export class EventsComponent {
 export class DialogEvent {
 
   myEvent: Observable<any>;
-  //existsPoll = false;
+  //bool existsPoll = false;
 
   constructor(
     private firestore: AngularFirestore,

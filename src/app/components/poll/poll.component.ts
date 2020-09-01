@@ -13,9 +13,9 @@ import { AngularFirestore } from '@angular/fire/firestore'
 })
 export class PollComponent implements OnInit {
 
-  public poll: Observable<any[]>;
+  public polls: Observable<any[]>;
   constructor(private firestore: AngularFirestore,) { 
-    this.poll = firestore.collection('poll').valueChanges({ idField: 'eventId'});
+    this.polls = firestore.collection('poll').valueChanges({ idField: 'eventId'});
   }
 
   ngOnInit(): void {

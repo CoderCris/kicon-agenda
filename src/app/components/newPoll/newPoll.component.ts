@@ -26,7 +26,6 @@ export class NewPollComponent implements OnInit {
   addPoll() {
 
     db.collection("poll").add({
-
       question: this.question,
       opt1: this.opt1,
       intOpt1: 0,
@@ -35,7 +34,7 @@ export class NewPollComponent implements OnInit {
       eventRef: history.state.data
     });
 
-    db.collection("events").doc(history.state.data).set({
+    db.collection("events").doc(history.state.data.toString()).update({
 
       poll : true
 
