@@ -42,11 +42,17 @@ export class EventEditComponent implements OnInit {
 
   }
 
-  editTime() {
-    db.collection("events").doc(this.id).set({
+  editHour() {
+    db.collection("events").doc(this.id).update({
 
       hour: this.hour,
-      minutes: this.minutes
+    })
+
+  }
+  editMinute() {
+    db.collection("events").doc(this.id).update({
+
+      minutes: this.minutes,
     })
 
   }
