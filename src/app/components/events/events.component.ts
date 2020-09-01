@@ -29,7 +29,7 @@ export class EventsComponent {
     //if(event.poll === undefined){no cargar poll}
   }
 
-  
+
 
   remove(id_event){
    
@@ -73,6 +73,7 @@ export class DialogEvent {
 
     console.log(this.data);
     this.myEvent = firestore.collection('events').doc(this.data.toString()).valueChanges();
+    console.log(this.myEvent)
     //if ()
     //const thisEvent = db.collection('events').doc(this.data).get();
 
