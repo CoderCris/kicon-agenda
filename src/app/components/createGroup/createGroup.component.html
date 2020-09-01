@@ -1,44 +1,28 @@
 <app-toolbar></app-toolbar>
 
-<div class="test">
-  <h1>Create test</h1>
-  <div *ngFor="let contact of contacts | async">
-
-    {{contact.name }} --- {{contact.mail }}
-
-  </div>
-</div>
 <div class="row">
   <div class="col-md-4"></div>
   <mat-card class="col-md-4">
     <mat-card-header>
       <mat-card-title>New group</mat-card-title>
     </mat-card-header>
-    <div class="content">
+    <div class="content margins">
       <mat-form-field>
         <mat-label>Group name</mat-label>
         <input matInput placeholder="Group name" [formControl]="group" required>
         <mat-error *ngIf="group.invalid">{{isEmpty()}}</mat-error>
       </mat-form-field>
 
-      <!--Cuando se le dé a aceptar, se guardan los emails y los nombres en map-->
       <div class="row">
         <div class="col-md-3"></div>
-        <div class="col-md-6">
+        <div class="col-md-6 margins">
           <label class="marginBottom">Contacts for the group</label>
-          <mat-checkbox>Contacto 1-(Email1) </mat-checkbox>
-          <mat-checkbox>Contacto 2-(Email2) </mat-checkbox>
-          <mat-checkbox>Contacto 3-(Email3) </mat-checkbox>
-          <mat-checkbox>Contacto 4-(Email4) </mat-checkbox>
+          <div *ngFor="let contact of contacts | async">
+              <mat-checkbox> {{contact.name }} --- {{contact.mail }} </mat-checkbox>
+          </div>
         </div>
         <div class="col-md-3"></div>
       </div>
-      <!--<div *ngFor="let contact of contacts" >
-          <mat-checkbox>
-            {{contact.name}} - {{contact.email}}
-          </mat-checkbox>
-       </div>-->
-
     </div>
     <div class="row center">
       <div class="col">

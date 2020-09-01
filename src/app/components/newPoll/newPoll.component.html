@@ -11,7 +11,7 @@
                 <div class="row">
                     <mat-form-field appearance="fill">
                         <mat-label>Question</mat-label>
-                        <input matInput>
+                        <input matInput [(ngModel)]="question">
                     </mat-form-field>
                 </div>
                 <div class="col-md-4"></div>
@@ -19,7 +19,7 @@
                 <div class="row">
                     <mat-form-field appearance="fill">
                         <mat-label>Answer 1</mat-label>
-                        <input matInput>
+                        <input matInput [(ngModel)]="opt1">
                     </mat-form-field>
                 </div>
                 <div class="col-md-4"></div>
@@ -27,7 +27,7 @@
                 <div class="row">
                 <mat-form-field appearance="fill">
                     <mat-label>Answer 2</mat-label>
-                    <input matInput>
+                    <input matInput [(ngModel)]="opt2">
                 </mat-form-field>
             </div>
             <div class="row">

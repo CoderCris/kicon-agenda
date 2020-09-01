@@ -18,7 +18,6 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { AddContactComponent } from './components/addContact/addContact.component';
 import { CreateGroupComponent } from './components/createGroup/createGroup.component';
 import { GroupsContactsViewComponent } from './components/groupsContactsView/groupsContactsView.component';
-import { EventViewComponent } from './components/eventView/eventView.component';
 import { EventEditComponent } from './components/events/event-edit/event-edit.component'
 import { MainpageComponent } from './components/mainpage/mainpage.component'
 import { GroupViewComponent } from './components/groupView/groupView.component'
@@ -51,7 +50,6 @@ import { MatSelectModule } from '@angular/material/select';
     AddContactComponent,
     CreateGroupComponent,
     GroupsContactsViewComponent,
-    EventViewComponent,
     MainpageComponent,
     GroupViewComponent,
     NewPollComponent,

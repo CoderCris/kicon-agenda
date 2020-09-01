@@ -2,15 +2,26 @@
     Events
 </div>
 <div class="eventList">
-    <!-- Crear un for para que se vaya rellenando con todos los datos-->
     <div *ngFor='let event of events | async'>
         <mat-card class="row">
             <div class="date col-md-4">
                 <div class="day">
                     {{event.date.toDate() | date:'dd/MM/yyyy'}}
                 </div>
-                <div class="month">
-                  {{event.hour}} : {{event.minutes}}
+                <div class="time">
+                    <div class ="paddingleft tablecell" *ngIf="event.hour == 1 ||event.hour == 2 ||event.hour == 3 ||event.hour == 4 ||event.hour == 5 ||event.hour == 6 ||event.hour == 7 ||event.hour == 8 || event.hour == 9; else nothing">
+                        0{{event.hour}}:
+                    </div>
+                    <ng-template class ="paddingleft tablecell" #nothing>
+                        {{event.hour}}:
+                    </ng-template>
+                    <div class ="tablecell" *ngIf="event.minutes == 0 || event.minutes == 5; else nothingM">
+                        0{{event.minutes}}
+                    </div>
+                    <ng-template class ="tablecell" #nothingM>
+                        {{event.minutes}}
+                    </ng-template>
+
                 </div>
             </div>
             <div class="info col-md-8">

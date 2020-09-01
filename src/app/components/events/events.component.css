@@ -50,11 +50,19 @@ mat-icon{
     font-weight: bolder;
 }
 
-.month{
+.time{
     text-align: center;
     font-size: x-large;
     font-weight: bold;
     padding-top: 15px;
+}
+
+.tablecell{
+    display: table-cell;
+}
+
+.paddingleft{
+    padding-left:15px;
 }
 
 .info{
@@ -71,4 +79,20 @@ mat-card{
 
 .dropdownButton{
     text-align: center;
+}
+
+@media only screen and (max-width: 600px){
+    .day{
+        font-size: x-large;
+    }
+    .title{
+        margin-top: 10px;
+    }
+
+    .dropdown-item{
+        font-size: medium;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
 }
