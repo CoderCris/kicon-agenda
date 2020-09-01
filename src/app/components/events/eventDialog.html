@@ -1,9 +1,9 @@
 
 <div class="thisEvent">
-    <!--<div> Si existe poll enseña, si no, añadir
+    <!--<div *ngIf="existsPoll == true; else add"> Si existe poll enseña, si no, añadir
         <app-poll></app-poll>
     </div>
-    <ng-template>
+    <ng-template #add>
         <button (click)="addPoll()">Añadir encuesta</button>
     </ng-template>-->
     <button (click)="addPoll()">Añadir encuesta</button>

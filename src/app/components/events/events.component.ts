@@ -64,6 +64,7 @@ export class EventsComponent {
 export class DialogEvent {
 
   myEvent: Observable<any>;
+  //existsPoll = false;
 
   constructor(
     private firestore: AngularFirestore,
