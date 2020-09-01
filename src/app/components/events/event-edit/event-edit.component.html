@@ -1,0 +1,99 @@
+<app-toolbar></app-toolbar>
+<div class="col-md-3"></div>
+<mat-card class="col-md-6">
+  <!--Arreglar con flexbox-->
+  <mat-card-header>
+    <mat-card-title>Edit event</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <mat-form-field>
+          <div class="row">
+            <input matInput type="text" name="name" placeholder="Event new name" [(ngModel)]="event_name" />
+          </div>
+        </mat-form-field>
+        <div class="row margin">
+          <button mat-raised-button (click)="editName()">Change Name</button>
+        </div>
+        <mat-form-field>
+          <div class="row">
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker" [(ngModel)]="date" name="date" required>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </div>
+        </mat-form-field>
+        <div class="row margin">
+          <button mat-raised-button (click)="editDate()">Change Date</button>
+        </div>
+        <mat-form-field>
+          <div class="row">
+            <mat-label>Choose an hour</mat-label>
+            <select [(ngModel)]="hour" matNativeControl required>
+              <option label="--select hour --"></option>
+              <option [ngValue]="0">{{"00"}}</option>
+              <option [ngValue]="1">{{"01"}}</option>
+              <option [ngValue]="2">{{"02"}}</option>
+              <option [ngValue]="3">{{"03"}}</option>
+              <option [ngValue]="4">{{"04"}}</option>
+              <option [ngValue]="5">{{"05"}}</option>
+              <option [ngValue]="6">{{"06"}}</option>
+              <option [ngValue]="7">{{"07"}}</option>
+              <option [ngValue]="8">{{"08"}}</option>
+              <option [ngValue]="9">{{"09"}}</option>
+              <option [ngValue]="10">{{"10"}}</option>
+              <option [ngValue]="11">{{"11"}}</option>
+              <option [ngValue]="12">{{"12"}}</option>
+              <option [ngValue]="13">{{"13"}}</option>
+              <option [ngValue]="14">{{"14"}}</option>
+              <option [ngValue]="15">{{"15"}}</option>
+              <option [ngValue]="16">{{"16"}}</option>
+              <option [ngValue]="17">{{"17"}}</option>
+              <option [ngValue]="18">{{"18"}}</option>
+              <option [ngValue]="19">{{"19"}}</option>
+              <option [ngValue]="20">{{"20"}}</option>
+              <option [ngValue]="21">{{"21"}}</option>
+              <option [ngValue]="22">{{"22"}}</option>
+              <option [ngValue]="23">{{"23"}}</option>
+            </select>
+          </div>
+        </mat-form-field>
+        <div class="row margin">
+          <button mat-raised-button (click)="editHour()">Change Hour</button>
+        </div>
+        <mat-form-field>
+          <div class="row">
+            <mat-label>Choose the minutes</mat-label>
+            <select [(ngModel)]="minutes" matNativeControl required>
+              <option label="--select minutes --"></option>
+              <option [ngValue]="00">{{"00"}}</option>
+              <option [ngValue]="05">{{"05"}}</option>
+              <option [ngValue]="10">{{"10"}}</option>
+              <option [ngValue]="15">{{"15"}}</option>
+              <option [ngValue]="20">{{"20"}}</option>
+              <option [ngValue]="25">{{"25"}}</option>
+              <option [ngValue]="30">{{"30"}}</option>
+              <option [ngValue]="35">{{"35"}}</option>
+              <option [ngValue]="40">{{"40"}}</option>
+              <option [ngValue]="45">{{"45"}}</option>
+              <option [ngValue]="50">{{"50"}}</option>
+              <option [ngValue]="55">{{"55"}}</option>
+            </select>
+          </div>
+        </mat-form-field>
+        <div class="row margin">
+          <button mat-raised-button (click)="editMinute()">Change Minutes</button>
+        </div>
+      </div>
+      <div class="col-md-1 "></div>
+    </div>
+  </mat-card-content>
+  <div class="row">
+    <div class="col margin">
+      <button mat-raised-button (click)="done()">Done</button>
+    </div>
+  </div>
+</mat-card>
+<div class="col-md-3"></div>

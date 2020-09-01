@@ -1,0 +1,51 @@
+<div class="titleList">
+    Events
+</div>
+<div class="eventList">
+    <div *ngFor='let event of events | async'>
+        <mat-card class="row">
+            <div class="date col-md-4">
+                <div class="day">
+                    {{event.date.toDate() | date:'dd/MM/yyyy'}}
+                </div>
+                <div class="time">
+                    <div class ="paddingleft tablecell" *ngIf="event.hour == 1 ||event.hour == 2 ||event.hour == 3 ||event.hour == 4 ||event.hour == 5 ||event.hour == 6 ||event.hour == 7 ||event.hour == 8 || event.hour == 9; else nothing">
+                        0{{event.hour}}:
+                    </div>
+                    <ng-template class ="paddingleft tablecell" #nothing>
+                        {{event.hour}}:
+                    </ng-template>
+                    <div class ="tablecell" *ngIf="event.minutes == 0 || event.minutes == 5; else nothingM">
+                        0{{event.minutes}}
+                    </div>
+                    <ng-template class ="tablecell" #nothingM>
+                        {{event.minutes}}
+                    </ng-template>
+
+                </div>
+            </div>
+            <div class="info col-md-8">
+                <div class="title" (click)="openDialog(event.eventId)">
+                    {{event.name}}
+                </div>
+                <div class="row dropdownButton">
+                    <div class="col-md-9">
+
+                    </div>
+                    <div class="col-md-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="eventDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <mat-icon class="add-icon" aria-hidden="false" aria-label="Example add icon">more_horiz
+                            </mat-icon>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="eventDropdown">
+                            <a class="dropdown-item" (click)="editEvent(event.eventId)">Edit</a>
+                            <a class="dropdown-item" (click)="remove(event.eventId)">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+    <!--Fin microview evento-->
+</div>

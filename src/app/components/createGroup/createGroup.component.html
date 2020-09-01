@@ -1,0 +1,37 @@
+<app-toolbar></app-toolbar>
+
+<div class="row">
+  <div class="col-md-4"></div>
+  <mat-card class="col-md-4">
+    <mat-card-header>
+      <mat-card-title>New group</mat-card-title>
+    </mat-card-header>
+    <div class="content margins">
+      <mat-form-field>
+        <mat-label>Group name</mat-label>
+        <input matInput placeholder="Group name" [formControl]="group" required>
+        <mat-error *ngIf="group.invalid">{{isEmpty()}}</mat-error>
+      </mat-form-field>
+
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 margins">
+          <label class="marginBottom">Contacts for the group</label>
+          <div *ngFor="let contact of contacts | async">
+              <mat-checkbox> {{contact.name }} --- {{contact.mail }} </mat-checkbox>
+          </div>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+    <div class="row center">
+      <div class="col">
+        <button mat-raised-button (click)="addGroup()">Accept</button>
+      </div>
+      <div class="col">
+        <button mat-raised-button (click)="cancel()">Cancel</button>
+      </div>
+    </div>
+  </mat-card>
+  <div class="col-md-4"></div>
+</div>

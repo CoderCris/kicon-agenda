@@ -1,0 +1,36 @@
+.groups{
+    display: flex;
+    flex-direction: column;
+}
+
+mat-divider{
+    color: black;
+    border-top-width: 2px;
+    border-top-color: rgba(0, 0, 0, .45);
+}
+
+mat-tab-group{
+    font-size: medium;
+    background-color: rgba(255, 255, 255, 0.45);
+    padding: 8px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.line{
+    padding-top: 4px;
+    padding-left: 4px;
+}
+
+.line:hover{
+    background-color: rgba(0,0,0, 0.1);
+}
+
+a{
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #6f5fff;
+}

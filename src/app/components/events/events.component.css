@@ -1,0 +1,98 @@
+.titleList{
+    font-size: xx-large;
+    margin: 3px;
+    background-color: rgba(255, 255, 255, 0.45);
+    padding: 8px;
+    border-radius: 10px;
+    width: max-content;
+}
+
+.eventList{
+    background-color: rgba(255, 255, 255, 0.45);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.eventContainer{
+    background-color: rgba(255, 255, 255, 0.45);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+mat-card{
+    margin: 5px;
+}
+
+mat-icon{
+    color: black;
+}
+
+.dropdown-toggle::after{
+    display: none;
+}
+
+.dropdown-toggle:hover{
+    background-color: rgba(0,0,0, 0.1);
+}
+
+.date{
+    background-color: rgba(244, 164, 96, 0.5);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 5px;
+}
+
+.day{
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.time{
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+.tablecell{
+    display: table-cell;
+}
+
+.paddingleft{
+    padding-left:15px;
+}
+
+.info{
+    font-size: large;
+}
+
+.title{
+    padding-bottom: 15px;
+}
+
+mat-card{
+    padding: 10px;
+}
+
+.dropdownButton{
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px){
+    .day{
+        font-size: x-large;
+    }
+    .title{
+        margin-top: 10px;
+    }
+
+    .dropdown-item{
+        font-size: medium;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+}
