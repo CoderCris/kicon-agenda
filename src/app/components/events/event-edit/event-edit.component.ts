@@ -62,7 +62,7 @@ export class EventEditComponent implements OnInit {
     this.router.navigate(['']); 
   }
 
-  cancel(){
+  done(){
     //enroutamiento a pagina principal
     this.router.navigate(['']); 
   }
